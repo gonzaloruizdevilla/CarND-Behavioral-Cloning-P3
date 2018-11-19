@@ -111,18 +111,30 @@ The result of this training can be seen here (accelerated x10): `track1_fast.mp4
 
 I started training a new model from scrach with track 2 videos, recorded in a similar way to the first track with 23,320 images. The car was driving autonomously quite well until a point after crossing the bridge, where another road can be seen on the horizon that made the car doubt on the right direction and finally crash.
 
-Track 2: files
+Track 2 csv file: https://drive.google.com/open?id=1tm_t777aYDlSZnm-mQIYuPBZf4R7e_9x
+Track 2 images: https://drive.google.com/open?id=1IMxq0d954hhffFK0X3dbe2rrrltaQitL
+
 
 The training can be seen in `behavioural_cloning_track2.ipynb`
 
 The video of the ride with the model of this training is `track2_fast.mp4`. In the last seconds, it can be observed how the car doubts and when it finally decides to go to the right is already too late.
 
-I tried to use both sets to see if it better generalized and adding a few recordings of the curve where the crash happened. The new trained model could drive in both track 1 and track 2, but it still continue to crash on the same curve. (`behavioural_cloning_track1_and_track2.ipynb`)
+I tried to use both datasets to see if it better generalized and adding a few recordings of the curve where the crash happened. The new trained model could drive in both track 1 and track 2, but it still continue to crash on the same curve. (`behavioural_cloning_track1_and_track2.ipynb`)
 
 I decided to continue training the model repeating the points of the curve so it could learn how to drive when two roads where in the view, that it was something with a low number of examples (). After this retraining (`behavioural_cloning_retrain_track1track2.ipynb`), it finally could drive through the complex curve as can be seen in the video: `t1t2_t2_retrained.mp4`
+
+Data added to training dataset for retraining:
+
+* CSV: https://drive.google.com/open?id=1yFnNUYUAWLv8AczuGLXU5Xv5KutVgRU_
+* Images: https://drive.google.com/open?id=1-rM9u1cPV-RAOy7dA8rrB4mDkqlprNG5
 
 I stopped just before a point when the normal driving started to behave strangely.
 
 This model used with track 1 generated this video: `t1t2_t1_retrained.mp4`. This model actually drives more centered than the one using only track 1 data.
 
 The model is: `model.h5`
+
+
+Things left to do:
+* add more training examples of the parts of the track where driving is not as good as it should be
+* try a model with transfer learning, 
