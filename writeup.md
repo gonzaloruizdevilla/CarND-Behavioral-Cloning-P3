@@ -100,12 +100,12 @@ Mirror with polygons
 
 ![Polygons](polygon.png)
 
-The training can be observed on the saved notebook: `behavioural_cloning.ipynb`
+The training can be observed on the saved notebook: `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/behavioural_cloning.ipynb`
 
 Thr collected data was used 80% as training data and 20% validation data. After each block of training epochs, new generators were created shuffling the training and testing data independently.
 
 After 125 epochs the model had a loss of 0.0583 and val loss of 0.0466
-The result of this training can be seen here (accelerated x10): `track1_fast.mp4`
+The result of this training can be seen here: `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/track1.mp4?raw=true`
 
 ### Track 2
 
@@ -115,13 +115,14 @@ Track 2 csv file: https://drive.google.com/open?id=1tm_t777aYDlSZnm-mQIYuPBZf4R7
 Track 2 images: https://drive.google.com/open?id=1IMxq0d954hhffFK0X3dbe2rrrltaQitL
 
 
-The training can be seen in `behavioural_cloning_track2.ipynb`
+The training can be seen in `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/behavioural_cloning_track2.ipynb`
 
-The video of the ride with the model of this training is `track2_fast.mp4`. In the last seconds, it can be observed how the car doubts and when it finally decides to go to the right is already too late.
 
-I tried to use both datasets to see if it better generalized and adding a few recordings of the curve where the crash happened. The new trained model could drive in both track 1 and track 2, but it still continue to crash on the same curve. (`behavioural_cloning_track1_and_track2.ipynb`)
+The video of the ride with the model of this training is `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/track2_fast.mp4?raw=true`. In the last seconds, it can be observed how the car doubts and when it finally decides to go to the right is already too late.
 
-I decided to continue training the model repeating the points of the curve so it could learn how to drive when two roads where in the view, that it was something with a low number of examples (). After this retraining (`behavioural_cloning_retrain_track1track2.ipynb`), it finally could drive through the complex curve as can be seen in the video: `t1t2_t2_retrained.mp4`
+I tried to use both datasets to see if it better generalized and adding a few recordings of the curve where the crash happened. The new trained model could drive in both track 1 and track 2, but it still continue to crash on the same curve. (`https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/behavioural_cloning_track1_and_track2.ipynb`)
+
+I decided to continue training the model repeating the points of the curve so it could learn how to drive when two roads where in the view, that it was something with a low number of examples (). After this retraining (`https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/behavioural_cloning_retrain_track1track2.ipynb`), it finally could drive through the complex curve as can be seen in the video: `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/t1t2_t2_retrained.mp4?raw=true`
 
 Data added to training dataset for retraining:
 
@@ -130,11 +131,10 @@ Data added to training dataset for retraining:
 
 I stopped just before a point when the normal driving started to behave strangely.
 
-This model used with track 1 generated this video: `t1t2_t1_retrained.mp4`. This model actually drives more centered than the one using only track 1 data.
+This model used with track 1 generated this video: `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/t1t2_t1_retrained.mp4?raw=true`. This model actually drives more centered than the one using only track 1 data.
 
-The model is: `model.h5`
+The final model is: `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/model.h5?raw=true`
 
 
 Things left to do:
-* add more training examples of the parts of the track where driving is not as good as it should be
-* try a model with transfer learning, 
+* add more training examples of the parts of the track where driving is not as good as it should be and retrain
