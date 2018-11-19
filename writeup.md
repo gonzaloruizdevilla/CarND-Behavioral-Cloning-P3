@@ -107,6 +107,8 @@ Thr collected data was used 80% as training data and 20% validation data. After 
 After 125 epochs the model had a loss of 0.0583 and val loss of 0.0466
 The result of this training can be seen here: `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/track1.mp4?raw=true`
 
+The model used is: `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/model_bc_9.h5?raw=true`
+
 ### Track 2
 
 I started training a new model from scrach with track 2 videos, recorded in a similar way to the first track with 23,320 images. The car was driving autonomously quite well until a point after crossing the bridge, where another road can be seen on the horizon that made the car doubt on the right direction and finally crash.
@@ -117,6 +119,7 @@ Track 2 images: https://drive.google.com/open?id=1IMxq0d954hhffFK0X3dbe2rrrltaQi
 
 The training can be seen in `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/behavioural_cloning_track2.ipynb`
 
+The model used is: `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/model_t2_11.h5?raw=true`
 
 The video of the ride with the model of this training is `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Cloning-P3/blob/master/track2_fast.mp4?raw=true`. In the last seconds, it can be observed how the car doubts and when it finally decides to go to the right is already too late.
 
@@ -138,3 +141,4 @@ The final model is: `https://github.com/gonzaloruizdevilla/CarND-Behavioral-Clon
 
 Things left to do:
 * add more training examples of the parts of the track where driving is not as good as it should be and retrain
+* use transfer learning (I've made a few tries with InceptionV3 but provisional results are not good and model is much bigger 3MB vs 90MB)
